@@ -29,3 +29,6 @@
 
 # VS
 *.sdf
+*.pdb
+*.tlog
+*.opensdf
