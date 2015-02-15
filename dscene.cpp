@@ -11,6 +11,15 @@ DScene::DScene(void)
 	coupleList = new QList<spxGame::collisionCouple*>;
 }
 
+DScene::DScene(QList<collisionObj*> *XL, QList<collisionObj*> *YL)
+{
+	collisionListX = XL;
+	collisionListY = YL;
+	uncollisionList = new QList<uncollisionObj*>;
+	jumpObjList = new QList<collisionObj*>;
+	coupleList = new QList<spxGame::collisionCouple*>;
+}
+
 
 DScene::~DScene(void)
 {

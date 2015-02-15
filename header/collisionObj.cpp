@@ -13,6 +13,7 @@ collisionObj::collisionObj(double _x = 0, double _y = 0,
 
 collisionObj::~collisionObj()
 {
+	delete this;
     return;
 }
 
