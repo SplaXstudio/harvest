@@ -25,6 +25,6 @@ private:
 
 	int id;
 protected:
-	void doCollisionTrigger();
+	void doTrigger();
 };
 

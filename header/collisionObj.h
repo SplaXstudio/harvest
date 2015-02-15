@@ -60,7 +60,7 @@ public:
     inline void setCollisionList(QList<collisionObj*>*);
 	
 };
-#endif // COLLISIONOBJ_H
+
 inline double collisionObj::X()
 {
 	return coor.x;
@@ -138,3 +138,4 @@ inline void collisionObj::setCollisionList(QList<collisionObj*> *colist)
 
 }
 
+#endif // COLLISIONOBJ_H

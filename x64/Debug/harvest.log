@@ -1,20 +1,14 @@
-﻿Build started 2/15/2015 4:37:31 PM.
-     1>Project "D:\programming\git\harvest\harvest.vcxproj" on node 2 (Build target(s)).
-     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(363,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+﻿生成启动时间为 2/15/2015 7:47:47 PM。
+     1>项目“F:\qt_test\harvest\harvest.vcxproj”在节点 2 上(Build 个目标)。
+       项目文件包含 ToolsVersion="12.0"。此工具集可能未知或缺失(您可以通过安装相应版本的 MSBuild 来解决该问题)，或者该生成因策略原因已被强制更改为特殊 ToolsVersion。将此项目视作具有 ToolsVersion="4.0"。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkId=291333。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(345,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
      1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I..\..\Qt\Qt5.2.1\5.2.1\msvc2012_64_opengl\include /I..\..\Qt\Qt5.2.1\5.2.1\msvc2012_64_opengl\include\QtWidgets /I..\..\Qt\Qt5.2.1\5.2.1\msvc2012_64_opengl\include\QtGui /I..\..\Qt\Qt5.2.1\5.2.1\msvc2012_64_opengl\include\QtCore /Idebug /I. /I"..\..\Qt\Qt5.2.1\5.2.1\msvc2012_64_opengl\mkspecs\win32-msvc2012" /I.\GeneratedFiles /ID:\Qt\Qt5.3.2\5.3\msvc2013_64_opengl\include\QtCore /ID:\Qt\Qt5.3.2\5.3\msvc2013_64_opengl\include\QtGui /ID:\Qt\Qt5.3.2\5.3\msvc2013_64_opengl\include\QtWidgets /Zi /nologo /W3 /WX- /Od /D _WINDOWS /D QT_CORE_LIB /D QT_GUI_LIB /D QT_WIDGETS_LIB /D UNICODE /D UNICODE /D WIN32 /D WIN32 /D WIN64 /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt -Zm200 -w34100 -w34189 dscene.cpp header\collisionObj.cpp spxlib.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\CL.exe /c /I..\..\Qt\Qt5.2.1\5.2.1\msvc2012_64_opengl\include /I..\..\Qt\Qt5.2.1\5.2.1\msvc2012_64_opengl\include\QtWidgets /I..\..\Qt\Qt5.2.1\5.2.1\msvc2012_64_opengl\include\QtGui /I..\..\Qt\Qt5.2.1\5.2.1\msvc2012_64_opengl\include\QtCore /Idebug /I. /I"..\..\Qt\Qt5.2.1\5.2.1\msvc2012_64_opengl\mkspecs\win32-msvc2012" /I.\GeneratedFiles /IF:\Qt\Qt5.2.1\5.2.1\msvc2012_64_opengl\include\QtCore /IF:\Qt\Qt5.2.1\5.2.1\msvc2012_64_opengl\include\QtGui /IF:\Qt\Qt5.2.1\5.2.1\msvc2012_64_opengl\include\QtWidgets /Zi /nologo /W3 /WX- /Od /D _WINDOWS /D QT_CORE_LIB /D QT_GUI_LIB /D QT_WIDGETS_LIB /D UNICODE /D UNICODE /D WIN32 /D WIN32 /D WIN64 /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"x64\Debug\\" /Fd"x64\Debug\vc110.pdb" /Gd /TP /errorReport:prompt -Zm200 -w34100 -w34189 dscene.cpp
          dscene.cpp
-     1>d:\programming\git\harvest\header\collisionObj.h(116): warning C4100: 'collisionID' : unreferenced formal parameter
-     1>d:\programming\git\harvest\header\collisionObj.h(136): warning C4100: 'colist' : unreferenced formal parameter
-         collisionObj.cpp
-     1>d:\programming\git\harvest\header\collisionObj.h(116): warning C4100: 'collisionID' : unreferenced formal parameter
-     1>d:\programming\git\harvest\header\collisionObj.h(136): warning C4100: 'colist' : unreferenced formal parameter
-         spxlib.cpp
-     1>d:\programming\git\harvest\header\collisionObj.h(116): warning C4100: 'collisionID' : unreferenced formal parameter
-     1>d:\programming\git\harvest\header\collisionObj.h(136): warning C4100: 'colist' : unreferenced formal parameter
-         Generating Code...
+     1>f:\qt_test\harvest\header\collisionObj.h(116): warning C4100: “collisionID”: 未引用的形参
+     1>f:\qt_test\harvest\header\collisionObj.h(136): warning C4100: “colist”: 未引用的形参
        Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\programming\git\harvest\x64\Debug\\harvest.exe" /NOLOGO /LIBPATH:D:\Qt\Qt5.3.2\5.3\msvc2013_64_opengl\lib /LIBPATH:D:\Qt\Qt5.3.2\5.3\msvc2013_64_opengl\lib glu32.lib opengl32.lib gdi32.lib user32.lib qtmaind.lib D:\Qt\Qt5.3.2\5.3\msvc2013_64_opengl\lib\Qt5Widgetsd.lib D:\Qt\Qt5.3.2\5.3\msvc2013_64_opengl\lib\Qt5Guid.lib D:\Qt\Qt5.3.2\5.3\msvc2013_64_opengl\lib\Qt5Cored.lib Qt5Cored.lib Qt5Guid.lib Qt5Widgetsd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\programming\git\harvest\x64\Debug\harvest.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X64 "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"  /SUBSYSTEM:WINDOWS x64\Debug\moc_console.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"F:\qt_test\harvest\x64\Debug\\harvest.exe" /NOLOGO /LIBPATH:F:\Qt\Qt5.2.1\5.2.1\msvc2012_64_opengl\lib /LIBPATH:F:\Qt\Qt5.2.1\5.2.1\msvc2012_64_opengl\lib glu32.lib opengl32.lib gdi32.lib user32.lib qtmaind.lib F:\Qt\Qt5.2.1\5.2.1\msvc2012_64_opengl\lib\Qt5Widgetsd.lib F:\Qt\Qt5.2.1\5.2.1\msvc2012_64_opengl\lib\Qt5Guid.lib F:\Qt\Qt5.2.1\5.2.1\msvc2012_64_opengl\lib\Qt5Cored.lib Qt5Cored.lib Qt5Guid.lib Qt5Widgetsd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\qt_test\harvest\x64\Debug\harvest.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X64 "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"  /SUBSYSTEM:WINDOWS x64\Debug\moc_console.obj
          x64\Debug\moc_mainwindow.obj
          x64\Debug\console.obj
          x64\Debug\dscene.obj
@@ -24,9 +18,9 @@
          x64\Debug\main.obj
          x64\Debug\mainwindow.obj
          x64\Debug\spxlib.obj
-         harvest.vcxproj -> D:\programming\git\harvest\x64\Debug\harvest.exe
-     1>Done Building Project "D:\programming\git\harvest\harvest.vcxproj" (Build target(s)).
+         harvest.vcxproj -> F:\qt_test\harvest\x64\Debug\harvest.exe
+     1>已完成生成项目“F:\qt_test\harvest\harvest.vcxproj”(Build 个目标)的操作。
 
-Build succeeded.
+生成成功。
 
-Time Elapsed 00:00:03.21
+已用时间 00:00:01.92

@@ -20,7 +20,7 @@ DScene::~DScene(void)
 void DScene::run()
 {
 	collisionTest();//计算碰撞
-
+	doTrigger();
 }
 
 
@@ -34,7 +34,7 @@ void DScene::collisionTest()
 	for(auto iter1 = collisionListX->begin(); iter1 != collisionListX->end(); ++iter1)
 	{
 		obj1 = *iter1;
-		for (auto iter2 = collisionListX->begin(); iter2 != collisionListX->end(); ++iter2)
+		for (auto iter2 = (iter1 + 1); iter2 != collisionListX->end(); ++iter2)
 		{
 			obj2 = *iter2;
 			if(obj1 == obj2)
@@ -49,7 +49,7 @@ void DScene::collisionTest()
 	for(auto iter1 = collisionListY->begin(); iter1 != collisionListY->end(); ++iter1)
 	{
 		obj1 = *iter1;
-		for (auto iter2 = collisionListY->begin(); iter2 != collisionListY->end(); ++iter2)
+		for (auto iter2 = (iter1 + 1); iter2 != collisionListY->end(); ++iter2)
 		{
 			obj2 = *iter2;
 			if(obj1 == obj2)
@@ -61,7 +61,7 @@ void DScene::collisionTest()
 		}
 	}
 	//取出所有x，y区间重叠的对象
-	while((!collisionListX->isEmpty()) && (!collisionListY->isEmpty()))
+//	while((!collisionListX->isEmpty()) && (!collisionListY->isEmpty()))
 	{
 		spxGame::collisionCouple *temp1;
 		spxGame::collisionCouple *temp2;
@@ -79,12 +79,18 @@ void DScene::collisionTest()
 					--iter2;
 				}
 			}
+			if(collisionListY->isEmpty())
+				break;
 		}
 	}
-	//将x区间重叠同时y区间也重叠的对象对加入链表
+	//将x区间重叠同时y区间也重叠的对象对加入链表,并直接触发碰撞事件
 }
 
-void DScene::doCollisionTrigger()
+void DScene::doTrigger()
 {
-	
+	for (auto iter = collisionListX->begin(); iter != collisionListX->end(); ++iter)
+	{
+		auto temp = *iter;
+		temp->trigger();
+	}
 }
