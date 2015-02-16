@@ -49,7 +49,7 @@ void DScene::collisionTest()
 			if(obj1 == obj2)
 				continue;
 			if(abs(obj1->X() - obj2->X()) < obj1->Width())
-				coupleListX << &spxGame::collisionCouple(obj1, obj2);
+				coupleListX << new spxGame::collisionCouple(obj1, obj2);
 			else
 				break;
 		}
@@ -64,7 +64,7 @@ void DScene::collisionTest()
 			if(obj1 == obj2)
 				continue;
 			if(abs(obj1->Y() - obj2->Y()) < obj1->Height())
-				coupleListY << &spxGame::collisionCouple(obj1, obj2);
+				coupleListY << new spxGame::collisionCouple(obj1, obj2);
 			else
 				break;
 		}
@@ -76,16 +76,16 @@ void DScene::collisionTest()
 		spxGame::collisionCouple *temp2;
 		for(auto iter1 = coupleListX.begin(); iter1 != coupleListX.end(); ++iter1)
 		{
-			temp1 = *iter1;
+			temp1 = *iter1;/**/
 			for (auto iter2 = coupleListY.begin(); iter2 != coupleListY.end(); ++iter2)
-			{
+			{int p = iter2 - coupleListY.begin();
 				temp2 = *iter2;
 				if(*temp1 == *temp2)
 				{
 					*coupleList << temp1;
 					temp1->collisionTrigger();
 					coupleListY.erase(iter2);
-					--iter2;
+					break;
 				}
 			}
 			if(collisionListY->isEmpty())
