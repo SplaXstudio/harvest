@@ -6,8 +6,8 @@ DScene::DScene(void)
 {
 	collisionListX = new QList<collisionObj*>;
 	collisionListY = new QList<collisionObj*>;
-	uncollisionList = new QList<uncollisionObj*>;	//说好的弃用呢？？？
 	jumpObjList = new QList<collisionObj*>;
+	sceneList = new QList<DScene*>;
 	coupleList = new QList<spxGame::collisionCouple*>;
 }
 
@@ -15,21 +15,40 @@ DScene::DScene(QList<collisionObj*> *XL, QList<collisionObj*> *YL)
 {
 	collisionListX = XL;
 	collisionListY = YL;
-	uncollisionList = new QList<uncollisionObj*>;
+	collisionListX = new QList<collisionObj*>;
+	collisionListY = new QList<collisionObj*>;
 	jumpObjList = new QList<collisionObj*>;
+	sceneList = new QList<DScene*>;
 	coupleList = new QList<spxGame::collisionCouple*>;
 }
 
 
 DScene::~DScene(void)
 {
+	for (auto i : *collisionListX)
+	{
+		i->~collisionObj();
+	}
+	for (auto i : *collisionListY)
+	{
+		i->~collisionObj();
+	}
+	for (auto i : *jumpObjList)
+	{
+		i->~collisionObj();
+	}
+	for (auto i : *coupleList)
+	{
+		i->~collisionCouple();
+	}
 }
 
 
 void DScene::run()
 {
-	collisionTest();//计算碰撞
-	doTrigger();
+	collisionTest();//计算碰撞，并触发
+	doTrigger();//全局判断函数
+	spxGame::sortObj(collisionListX, collisionListY);
 }
 
 
@@ -76,9 +95,9 @@ void DScene::collisionTest()
 		spxGame::collisionCouple *temp2;
 		for(auto iter1 = coupleListX.begin(); iter1 != coupleListX.end(); ++iter1)
 		{
-			temp1 = *iter1;/**/
+			temp1 = *iter1;
 			for (auto iter2 = coupleListY.begin(); iter2 != coupleListY.end(); ++iter2)
-			{int p = iter2 - coupleListY.begin();
+			{
 				temp2 = *iter2;
 				if(*temp1 == *temp2)
 				{
@@ -91,6 +110,7 @@ void DScene::collisionTest()
 			if(collisionListY->isEmpty())
 				break;
 		}
+		temp1->~collisionCouple(); temp2->~collisionCouple();//防泄漏
 	}
 	//将x区间重叠同时y区间也重叠的对象对加入链表,并直接触发碰撞事件
 }
