@@ -4,12 +4,13 @@
 int main(int argc, char** argv)
 {
 	QList<collisionObj*> *Xlist = new QList < collisionObj* >, *Ylist = new QList < collisionObj* > ;
+	QList<collisionObj*> *testlist = new QList < collisionObj* > ;
 	for (double i = 1; i <= 5; ++i)
 	{
 		collisionObj* temp = new collisionObj(i, 2 * i - 1, 0, QPointF(0, 0));
 		spxGame::insertObj(Xlist, Ylist, temp);
 	}
-
+	Ylist->swap(1, 3);
 	qDebug() << "Xlist: \n";
 	for (auto i : *Xlist)
 	{

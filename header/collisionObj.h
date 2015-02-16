@@ -35,6 +35,7 @@ private:
 	
 public:
     collisionObj(double, double, double, QPointF);
+	collisionObj(collisionObj*);
     virtual ~collisionObj();
 	inline int tp(){return tpTo;};
 
@@ -147,13 +148,5 @@ inline void collisionObj::setCollisionList(QList<collisionObj*> *colist)
 
 }
 
-bool collisionObj::operator==(collisionObj* obj)
-{
-	if (ID == obj->ID)		//´ý¶¨
-	{
-		return 1;
-	}
-	return 0;
-}
 
 #endif // COLLISIONOBJ_H

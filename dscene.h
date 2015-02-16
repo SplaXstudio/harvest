@@ -1,9 +1,6 @@
 #pragma once
 
-#include <qlist.h>
 #include "spxlib.h"
-#include "header\uncollisionObj.h"
-#include "header\collisionObj.h"
 
 class DScene
 {
