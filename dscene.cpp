@@ -6,7 +6,7 @@ DScene::DScene(void)
 {
 	collisionListX = new QList<collisionObj*>;
 	collisionListY = new QList<collisionObj*>;
-	uncollisionList = new QList<uncollisionObj*>;
+	uncollisionList = new QList<uncollisionObj*>;	//说好的弃用呢？？？
 	jumpObjList = new QList<collisionObj*>;
 	coupleList = new QList<spxGame::collisionCouple*>;
 }
