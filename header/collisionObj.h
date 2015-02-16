@@ -13,9 +13,9 @@ class collisionObj
 private:
     struct coordinate
     {
-    double x;
-    double y;
-    double z;
+    double X;
+    double Y;
+    double Z;
     }coor;
     double width;
     double height;
@@ -27,8 +27,8 @@ private:
 
     DAnimation *animation;
 
-    int id;
-	int sceneid;
+    int ID;
+	int sceneID;
 	int tpTo;
 
     QList<collisionObj*> * collisionList;
@@ -38,9 +38,9 @@ public:
     virtual ~collisionObj();
 	inline int tp(){return tpTo;};
 
-    inline double X() const;
-	inline double Y() const;
-	inline double Z() const;
+    inline double x() const;
+	inline double y() const;
+	inline double z() const;
 
 	inline double Width() const;
 	inline double Height() const;
@@ -58,24 +58,24 @@ public:
     inline virtual void collisionTrigger(int);
 
     inline void setID(int);
-	inline int ID() const;
-	inline int sceneID();
+	inline int id() const;
+	inline int sceneid();
 
     inline void setCollisionList(QList<collisionObj*>*);
 	
 };
 
-inline double collisionObj::X() const
+inline double collisionObj::x() const
 {
-	return coor.x;
+	return coor.X;
 }
-inline double collisionObj::Y() const
+inline double collisionObj::y() const
 {
-	return coor.y;
+	return coor.Y;
 }
-inline double collisionObj::Z() const
+inline double collisionObj::z() const
 {
-	return coor.z;
+	return coor.Z;
 }
 inline double collisionObj::Width() const
 {
@@ -88,15 +88,15 @@ inline double collisionObj::Height() const
 
 inline void collisionObj::setX(double shit)
 {
-	coor.x = shit;
+	coor.X = shit;
 }
 inline void collisionObj::setY(double shit)
 {
-	coor.y = shit;
+	coor.Y = shit;
 }
 inline void collisionObj::setZ(double shit)
 {
-	coor.z = shit;
+	coor.Z = shit;
 }
 inline void collisionObj::setWidth(double shit)
 {
@@ -114,8 +114,8 @@ inline QPointF collisionObj::size() const
 
 inline void collisionObj::trigger()
 {
-	qDebug() << "x: " << this->X()		//unittest
-		<< " y: " << this->Y()			//unittest
+	qDebug() << "x: " << this->x()		//unittest
+		<< " y: " << this->y()			//unittest
 		<< " has been triggered!\n";	//unittest
 	return;
 }
@@ -127,17 +127,17 @@ inline void collisionObj::collisionTrigger(int collisionID)
 
 inline void collisionObj::setID(int _id)
 {
-	sceneid = _id;
+	ID = _id;
 }
 
-inline int collisionObj::ID() const
+inline int collisionObj::id() const
 {
-	return id;
+	return ID;
 }
 
-inline int collisionObj::sceneID()
+inline int collisionObj::sceneid()
 {
-	return sceneid;
+	return sceneID;
 }
 
 inline void collisionObj::setCollisionList(QList<collisionObj*> *colist)
