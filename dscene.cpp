@@ -48,7 +48,7 @@ void DScene::collisionTest()
 			obj2 = *iter2;
 			if(obj1 == obj2)
 				continue;
-			if(abs(obj1->X() - obj2->X()) < obj1->Width())
+			if(abs(obj1->x() - obj2->x()) < obj1->Width())
 				coupleListX << new spxGame::collisionCouple(obj1, obj2);
 			else
 				break;
@@ -63,7 +63,7 @@ void DScene::collisionTest()
 			obj2 = *iter2;
 			if(obj1 == obj2)
 				continue;
-			if(abs(obj1->Y() - obj2->Y()) < obj1->Height())
+			if(abs(obj1->y() - obj2->y()) < obj1->Height())
 				coupleListY << new spxGame::collisionCouple(obj1, obj2);
 			else
 				break;

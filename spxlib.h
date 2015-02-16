@@ -19,7 +19,7 @@ namespace spxGame
 		bool operator == (collisionCouple temp){return ((first == temp.firstObj()) && (second == temp.secondObj()))
 													|| ((first == temp.secondObj()) && (second == temp.firstObj()));}
 
-		void collisionTrigger(){first->collisionTrigger(second->ID()); second->collisionTrigger(first->ID());}
+		void collisionTrigger(){first->collisionTrigger(second->id()); second->collisionTrigger(first->id());}
 	private:
 		collisionObj* first;
 		collisionObj* second;

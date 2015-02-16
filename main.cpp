@@ -8,7 +8,7 @@ int main(int argc, char** argv)
 	for (double base = 0; base < 5; ++base)
 	{
 		collisionObj *temp = new collisionObj(base * 11, base * 11, 0, QPointF(20, 20));
-		temp->setID(base);
+		temp->setID((int)base);
 		Lx->append(temp);
 		Ly->append(temp);
 	}
@@ -19,9 +19,9 @@ int main(int argc, char** argv)
 
 	for (auto i : *scene->coupleList)
 	{
-		qDebug() << i->firstObj()->ID()  
+		qDebug() << i->firstObj()->id()  
 			<< " collision with " 
-			<< i->secondObj()->ID()
+			<< i->secondObj()->id()
 			<< "\n";
 	}
 
