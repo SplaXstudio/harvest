@@ -29,12 +29,14 @@ private:
 
     int id;
 	int sceneid;
+	int tpTo;
 
     QList<collisionObj*> * collisionList;
-
+	
 public:
     collisionObj(double, double, double, QPointF);
     virtual ~collisionObj();
+	inline int tp(){return tpTo;};
 
     inline double X() const;
 	inline double Y() const;

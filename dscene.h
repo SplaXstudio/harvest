@@ -13,16 +13,16 @@ public:
 	~DScene(void);
 
 	void run();//场景主循环
-	void collisionTest();
-
+	
+	void addItem(collisionObj*);
+	void delItem(collisionObj*);
 	
 private:
 	QList<collisionObj*> *collisionListX;
 	QList<collisionObj*> *collisionListY;
-	QList<uncollisionObj*> *uncollisionList;
 
 	QList<collisionObj*> *jumpObjList;//场景跳转相关对象链表
-
+	QList<DScene*> *sceneList;
 	
 public:		//unittest
 	QList<spxGame::collisionCouple*> *coupleList;//碰撞对链表
@@ -31,5 +31,7 @@ private:	//unittest
 	int id;
 protected:
 	void doTrigger();
+	void collisionTest();
+	void tpTrigger();
 };
 

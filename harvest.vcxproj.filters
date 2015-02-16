@@ -51,6 +51,12 @@
     <Filter Include="Source Files\header">
       <UniqueIdentifier>{574fdc68-186a-4762-9755-0174eaf67b58}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\qt">
+      <UniqueIdentifier>{b68733f6-1628-4134-a4e0-2e4c39ce8eb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\qt">
+      <UniqueIdentifier>{5e5ac541-f2d8-4420-be4c-a58b6176bdd3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="console.cpp">

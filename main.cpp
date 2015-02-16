@@ -24,7 +24,6 @@ int main(int argc, char** argv)
 			<< i->secondObj()->ID()
 			<< "\n";
 	}
-
 	return 0;
 }
 /*
